@@ -1,0 +1,114 @@
+:root {
+	--primary: rgba(161, 222, 211, 0.68);
+	--secondary: rgba(255, 255, 255, 0.5);
+	--text: rgba(10, 10, 12, 0.7);
+	--font: 1rem;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	width: 100%;
+	background: var(--secondary);
+	display: flex;
+	flex-flow: column wrap;
+	overflow: hidden;
+	align-items: center;
+	height: 100vh;
+}
+.header {
+	width: 100%;
+	background: var(--primary);
+	display: block;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	min-height: 10vh;
+}
+.header::before {
+	content: "";
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	background: radial-gradient(#c28ded, #f84dfade);
+	backdrop-filter: blur(15px) saturate(200%);
+	position: absolute;
+	right: -1em;
+	top: -1.8em;
+	z-index: -1;
+}
+.header::after {
+	content: "";
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	background: radial-gradient(#edda8d, #d8f1a8de);
+	backdrop-filter: blur(15px) saturate(200%);
+	position: absolute;
+	left: -1.5em;
+	bottom: -1.8em;
+	z-index: -1;
+}
+nav {
+	width: inherit;
+	height: inherit;
+	z-index: 99;
+}
+
+nav ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	background-color: transparent;
+}
+.item {
+	list-style: none;
+	cursor: pointer;
+	font-size: var(--font);
+	padding: 0.5em;
+	flex: 1 1 auto;
+}
+.item:hover a {
+	transition: 0.5s ease all;
+	color: #100f0f;
+}
+.item > a {
+	padding: auto;
+	text-decoration: none;
+	padding: inherit;
+	color: var(--text);
+	cursor: pointer;
+	z-index: 1;
+}
+.container {
+	display: flex;
+	flex-flow: column wrap;
+}
+h1 {
+	flex: 1 1 auto;
+}
+
+footer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 10vh;
+	position: absolute;
+	bottom: 0;
+	background: var(--text);
+	color: rgba(255, 255, 255, 0.779);
+	font-weight: 900;
+	font-size: 1.2rem;
+}
+html {
+	font-size: 18px;
+}
