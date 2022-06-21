@@ -1,6 +1,6 @@
 :root {
 	--primary: rgba(161, 222, 211, 0.68);
-	--secondary: rgba(255, 255, 255, 0.5);
+	--secondary: rgba(208, 208, 208, 0.798);
 	--text: rgba(10, 10, 12, 0.7);
 	--font: 1rem;
 }
@@ -94,7 +94,13 @@ nav ul {
 h1 {
 	flex: 1 1 auto;
 }
-
+.error {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 1em 0;
+	color: #e21;
+}
 footer {
 	display: flex;
 	flex-flow: row wrap;
