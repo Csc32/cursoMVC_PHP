@@ -2,7 +2,7 @@
     class ErrorClass extends Controller {
         function __construct(){
             parent::__construct();
-            $this->view->message = "Error to load the source :(";
+            $this->view->message = "Error source not found 😥";
             $this->view->render("error/index");
 
         }
