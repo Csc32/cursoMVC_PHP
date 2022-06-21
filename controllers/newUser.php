@@ -7,7 +7,7 @@
 
         function registerUser(){
             echo "Susscesful";
-            $this->Model->insert(); 
+            $this->model->insert(); 
         }
     }
 
