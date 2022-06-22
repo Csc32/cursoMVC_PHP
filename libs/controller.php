@@ -5,13 +5,14 @@
         }
 
         function loadModel($model){
-                $url = 'models/'.$model."/model.php";
-                echo $url;
-
+                $url = 'models/'.$model.".php";
+        
                 if(file_exists($url)){
+                    //echo $url;
                     require $url;
 
                     $modelName   = $model.'Model';
+                    echo $modelName;
 
                     $this->model = new $modelName();
                 }
